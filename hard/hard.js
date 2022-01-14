@@ -18,3 +18,13 @@ function bmi2 () {
     
 }
 
+let tom = [Number(document.querySelector('#tomMArg').value), Number(document.querySelector('#tomHArg').value)];
+let jerry = [Number(document.querySelector('#jerryMArg').value), Number(document.querySelector('#jerryHArg').value)];
+
+function bmi3 (a, b) {
+    let bmi1 = a[0] / Math.pow(a[1], 2);
+    let bmi2 = b[0] / Math.pow(b[1], 2);
+
+    return `Is Tom's BMI(${bmi1}) higher than Jerry's BMI(${bmi2})? ${Boolean(bmi1 > bmi2)}`
+}
+console.log(bmi3 (tom, jerry))
